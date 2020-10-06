@@ -7,6 +7,12 @@ user=$USER
 home=$HOME
 
 sudo su << EOSU
+apt install -y npm
+EOSU
+
+npm install
+
+sudo su << EOSU
 
 export LC_ALL=C
 
@@ -29,4 +35,5 @@ systemctl enable reveal.service
 systemctl restart reveal.service
 
 EOSU
+
 
